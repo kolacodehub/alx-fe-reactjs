@@ -4,17 +4,16 @@ const useRecipeStore = create((set) => ({
   recipes: [],
   searchTerm: "",
   filteredRecipes: [],
+  favorites: [], // Store favorite recipe IDs
+  recommendations: [], // Store recommended recipes
 
-  // Action to add a recipe (Modified to likely require re-filtering in components)
   addRecipe: (newRecipe) =>
     set((state) => ({
       recipes: [...state.recipes, newRecipe],
     })),
 
-  // Action to set the search term
   setSearchTerm: (term) => set({ searchTerm: term }),
 
-  // Action to filter recipes based on search term
   filterRecipes: () =>
     set((state) => ({
       filteredRecipes: state.recipes.filter((recipe) =>
@@ -22,9 +21,33 @@ const useRecipeStore = create((set) => ({
       ),
     })),
 
+  // Favorites Actions
+  addFavorite: (recipeId) =>
+    set((state) => ({
+      favorites: [...state.favorites, recipeId],
+    })),
+
+  removeFavorite: (recipeId) =>
+    set((state) => ({
+      favorites: state.favorites.filter((id) => id !== recipeId),
+    })),
+
+  // Mock Recommendation Logic
+  generateRecommendations: () =>
+    set((state) => {
+      // Mock logic: Recommend recipes that are NOT in favorites
+      // In a real app, this would check ingredients or tags
+      const recommended = state.recipes.filter(
+        (recipe) => !state.favorites.includes(recipe.id) && Math.random() > 0.5,
+      );
+      return { recommendations: recommended };
+    }),
+
   deleteRecipe: (id) =>
     set((state) => ({
       recipes: state.recipes.filter((recipe) => recipe.id !== id),
+      // Also remove from favorites if deleted
+      favorites: state.favorites.filter((favId) => favId !== id),
     })),
 
   updateRecipe: (updatedRecipe) =>
