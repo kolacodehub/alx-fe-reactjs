@@ -2,10 +2,20 @@ import { useRecipeStore } from "./recipeStore";
 import { Link } from "react-router-dom";
 
 const FavoritesList = () => {
-  // Select favorites and map them to actual recipe objects
-  const favorites = useRecipeStore((state) =>
-    state.favorites.map((id) => state.recipes.find((r) => r.id === id)),
-  );
+  // 1. Select the raw data separately.
+  // This is safer than doing complex logic inside the selector.
+  const recipes = useRecipeStore((state) => state.recipes);
+  const favorites = useRecipeStore((state) => state.favorites);
+
+  // 2. Defensive check: If favorites hasn't been initialized in the store yet, don't crash.
+  if (!favorites || !recipes) {
+    return null; // Or return <div>Loading...</div>
+  }
+
+  // 3. Map IDs to recipes and filter out any undefined ones (in case a recipe was deleted)
+  const displayedFavorites = favorites
+    .map((id) => recipes.find((r) => r.id === id))
+    .filter((recipe) => recipe !== undefined);
 
   return (
     <div
@@ -16,20 +26,22 @@ const FavoritesList = () => {
       }}
     >
       <h2>My Favorites</h2>
-      {favorites.length === 0 ? (
+      {displayedFavorites.length === 0 ? (
         <p>No favorites yet.</p>
       ) : (
-        favorites.map(
-          (recipe) =>
-            recipe && ( // Check if recipe exists (in case it was deleted)
-              <div key={recipe.id}>
-                <h3>
-                  <Link to={`/recipe/${recipe.id}`}>{recipe.title}</Link>
-                </h3>
-                <p>{recipe.description}</p>
-              </div>
-            ),
-        )
+        displayedFavorites.map((recipe) => (
+          <div key={recipe.id} style={{ marginBottom: "15px" }}>
+            <h3>
+              <Link
+                to={`/recipe/${recipe.id}`}
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                {recipe.title}
+              </Link>
+            </h3>
+            <p>{recipe.description}</p>
+          </div>
+        ))
       )}
     </div>
   );
