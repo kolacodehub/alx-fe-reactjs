@@ -7,7 +7,6 @@ const DeleteRecipeButton = ({ recipeId }) => {
 
   const handleDelete = () => {
     deleteRecipe(recipeId);
-    // Optional: Navigate back to the list after deletion
     navigate("/");
   };
 
