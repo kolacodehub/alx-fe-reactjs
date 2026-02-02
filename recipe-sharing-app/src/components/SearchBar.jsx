@@ -13,9 +13,9 @@ const SearchBar = () => {
   return (
     <input
       type="text"
-      placeholder="Search recipes..."
+      placeholder="Search for a recipe..."
       onChange={handleSearch}
-      style={{ margin: "20px 0", padding: "10px", width: "300px" }}
+      className="search-bar" /* ADD CLASS HERE */
     />
   );
 };

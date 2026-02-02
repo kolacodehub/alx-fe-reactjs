@@ -14,22 +14,19 @@ const RecipeList = () => {
   }, [searchTerm, recipes, filterRecipes]);
 
   return (
-    <div>
+    <div className="recipe-grid">
+      {" "}
+      {/* CHANGE TO GRID CLASS */}
       {filteredRecipes.length > 0 ? (
         filteredRecipes.map((recipe) => (
-          <div
-            key={recipe.id}
-            style={{ borderBottom: "1px solid #ccc", padding: "10px" }}
-          >
+          <div key={recipe.id} className="recipe-card">
+            {" "}
+            {/* ADD CARD CLASS */}
             <h3>
-              <Link
-                to={`/recipe/${recipe.id}`}
-                style={{ textDecoration: "none", color: "blue" }}
-              >
-                {recipe.title}
-              </Link>
+              <Link to={`/recipe/${recipe.id}`}>{recipe.title}</Link>
             </h3>
-            <p>{recipe.description}</p>
+            <p>{recipe.description.substring(0, 100)}...</p>{" "}
+            {/* Truncate text */}
           </div>
         ))
       ) : (
@@ -38,5 +35,4 @@ const RecipeList = () => {
     </div>
   );
 };
-
 export default RecipeList;
