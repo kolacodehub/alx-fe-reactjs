@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { fetchUserData } from "../services/githubService"; // Import Step 2
+// import { fetchUserData } from "../services/githubService"; // Import Step 2
 
 const Search = () => {
   const [username, setUsername] = useState("");
@@ -14,14 +14,14 @@ const Search = () => {
     setError(false);
     setUserData(null);
 
-    try {
-      const data = await fetchUserData(username);
-      setUserData(data); 
-    } catch (error) {
-      setError(true);
-    } finally {
-      setLoading(false);
-    }
+    // try {
+    //   const data = await fetchUserData(username);
+    //   setUserData(data); 
+    // } catch (error) {
+    //   setError(true);
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   return (
