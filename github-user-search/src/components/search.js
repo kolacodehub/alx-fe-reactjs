@@ -48,7 +48,7 @@ const Search = () => {
         <button type="submit">Search</button>
       </form>
 
-      {/* Results Display Area */}
+      {/* Results Display Areajjj */}
       <div className="results-section">
         {/* State: Loading */}
         {loading && <p>Loading...</p>}
