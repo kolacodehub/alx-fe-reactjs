@@ -5,7 +5,7 @@ function UserProfile() {
   return (
     <div className="user-profile bg-gray-100 mx-auto my-20 rounded-lg shadow-lg sm:p-4 md:p-8 max-w-xs md:max-w-sm">
       <img
-        className="rounded-full mx-auto w-24 h-24 md:w-36 md:h-36"
+        className="rounded-full mx-auto sm:w-24 sm:h-24 md:w-36 md:h-36"
         src={UserImage}
         alt="User"
       />
