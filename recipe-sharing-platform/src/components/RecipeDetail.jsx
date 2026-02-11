@@ -22,7 +22,7 @@ const RecipeDetail = () => {
     <div className="container mx-auto p-4 max-w-4xl">
       <Link
         to="/"
-        className="inline-block mb-6 px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition"
+        className="inline-block mb-6 px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-500 transition"
       >
         &larr; Back to Recipes
       </Link>
