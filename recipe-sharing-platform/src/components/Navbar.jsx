@@ -16,7 +16,7 @@ const Navbar = () => {
     // backdrop-blur-md = blurs the content scrolling underneath
     // sticky top-0 = stays fixed at the top
     <nav className="bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100 sticky top-0 z-50 transition-all duration-300">
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* 2. THE LOGO: Branding */}
         <Link
           to="/"
