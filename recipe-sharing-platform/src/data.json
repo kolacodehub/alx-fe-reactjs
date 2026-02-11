@@ -2,31 +2,79 @@
   {
     "id": 1,
     "title": "Spaghetti Carbonara",
-    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://images.unsplash.com/photo-1516100882582-96c3a05fe590?auto=format&fit=crop&w=800&q=80"
+    "summary": "A classic Italian pasta dish...",
+    "image": "https://images.unsplash.com/photo-1516100882582-96c3a05fe590?auto=format&fit=crop&w=800&q=80",
+    "ingredients": [
+      "Spaghetti",
+      "Eggs",
+      "Pancetta",
+      "Parmesan Cheese",
+      "Black Pepper"
+    ],
+    "instructions": "1. Boil pasta in salted water until al dente.\n2. Fry pancetta until crisp.\n3. Whisk eggs and cheese in a bowl.\n4. Combine hot pasta with pancetta, then remove from heat and mix in the egg mixture quickly to create a creamy sauce."
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "ingredients": [
+      "Chicken Breast",
+      "Yogurt",
+      "Tomato Puree",
+      "Heavy Cream",
+      "Garam Masala",
+      "Cumin",
+      "Ginger-Garlic Paste"
+    ],
+    "instructions": "1. Marinate chicken in yogurt and spices for 1 hour.\n2. Grill or sear the chicken pieces until cooked.\n3. Simmer tomato puree with spices and cream.\n4. Add chicken to the sauce and simmer for 10 minutes."
   },
   {
     "id": 3,
     "title": "Spicy Beef Tacos",
     "summary": "Authentic Mexican street tacos with marinated beef, fresh cilantro, and zesty lime.",
-    "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "ingredients": [
+      "Corn Tortillas",
+      "Ground Beef",
+      "Chili Powder",
+      "Lime",
+      "Cilantro",
+      "Onion",
+      "Salsa"
+    ],
+    "instructions": "1. Cook beef in a skillet with chili powder and cumin.\n2. Warm tortillas in a dry pan.\n3. Fill tortillas with beef.\n4. Top with fresh onion, cilantro, a squeeze of lime, and salsa."
   },
   {
     "id": 4,
     "title": "Fresh Sushi Roll",
     "summary": "Premium sashimi-grade fish wrapped in seasoned rice and nori with avocado.",
-    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "ingredients": [
+      "Sushi Rice",
+      "Nori Sheets",
+      "Fresh Salmon or Tuna",
+      "Avocado",
+      "Cucumber",
+      "Soy Sauce",
+      "Wasabi"
+    ],
+    "instructions": "1. Cook sushi rice and season with rice vinegar.\n2. Place nori sheet on a bamboo mat.\n3. Spread rice over nori and add fish and vegetables.\n4. Roll tightly using the mat, slice into pieces, and serve."
   },
   {
     "id": 5,
     "title": "Chocolate Lava Cake",
     "summary": "Rich and gooey molten chocolate cake served warm with a scoop of vanilla ice cream.",
-    "image": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "ingredients": [
+      "Dark Chocolate",
+      "Butter",
+      "Eggs",
+      "Sugar",
+      "Flour",
+      "Vanilla Extract",
+      "Ice Cream (optional)"
+    ],
+    "instructions": "1. Melt chocolate and butter together.\n2. Whisk eggs and sugar until pale, then fold in flour and chocolate mix.\n3. Pour into greased ramekins.\n4. Bake at 400°F (200°C) for 12-14 minutes until sides are set but center is jiggly."
   }
 ]

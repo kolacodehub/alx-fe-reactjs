@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import recipeData from "../data.json";
 
 const HomePage = () => {
   const [recipes] = useState(recipeData);
 
-//   No need of it, since i am getting data or something outside react
+  //   No need of it, since i am getting data or something outside react
 
-//   useEffect(() => {
-//     setRecipes(recipeData);
-//   }, []);
+  //   useEffect(() => {
+  //     setRecipes(recipeData);
+  //   }, []);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -25,7 +26,7 @@ const HomePage = () => {
         {recipes.map((recipe) => (
           <div
             key={recipe.id}
-            className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+            className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-102 hover:shadow-2xl"
           >
             <img
               src={recipe.image}
@@ -38,7 +39,7 @@ const HomePage = () => {
               </h2>
               <p className="text-gray-600 text-sm mb-4">{recipe.summary}</p>
               <button className="mt-4 px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 transition duration-300">
-                View Recipe
+                <Link to={`/recipe/${recipe.id}`}>View Recipe</Link>
               </button>
             </div>
           </div>
