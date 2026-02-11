@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import recipeData from "../data.json";
 
 const HomePage = () => {
-  const [recipes, setRecipes] = useState([]);
+  const [recipes] = useState(recipeData);
 
-  useEffect(() => {
-    setRecipes(recipeData);
-  }, []);
+//   No need of it, since i am getting data or something outside react
+
+//   useEffect(() => {
+//     setRecipes(recipeData);
+//   }, []);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -35,7 +37,7 @@ const HomePage = () => {
                 {recipe.title}
               </h2>
               <p className="text-gray-600 text-sm mb-4">{recipe.summary}</p>
-              <button className="btn btn-success text-orange-500 hover:text-blue-700 hover:underline">
+              <button className="mt-4 px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 transition duration-300">
                 View Recipe
               </button>
             </div>
